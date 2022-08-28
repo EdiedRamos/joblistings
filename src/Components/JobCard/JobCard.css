@@ -61,7 +61,6 @@
 .keywords {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .keywords p {
@@ -71,4 +70,19 @@
   padding: 4px;
   border-radius: 4px;
   margin: 5px;
+}
+
+.keywords p:hover {
+  background-color: var(--desaturated-dark-cyan-200);
+  color: var(--light-grayish-cyan-100);
+  cursor: pointer;
+}
+
+.position {
+  display: inline-block;
+}
+
+.position:hover {
+  color: var(--desaturated-dark-cyan-200);
+  cursor: pointer;
 }

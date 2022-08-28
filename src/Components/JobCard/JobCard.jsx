@@ -10,7 +10,7 @@ export const JobCard = () => {
           <p className="new">NEW!</p>
           <p className="featured">FEATURED</p>
         </div>
-        <p>Senior Frontend Developer</p>
+        <p className="position">Senior Frontend Developer</p>
         <p>1d ago • Full Time • USA only</p>
       </div>
       <hr />
