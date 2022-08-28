@@ -1,0 +1,6 @@
+header {
+  background-image: url("./Assets/images/bg-header-desktop.svg");
+  min-height: 20vh;
+  background-color: var(--desaturated-dark-cyan-200);
+  background-size: cover;
+}

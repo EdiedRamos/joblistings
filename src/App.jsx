@@ -1,5 +1,8 @@
+import "./App.css";
+import { Jobs } from "./Pages";
+
 function App() {
-  return <div>App</div>;
+  return <Jobs />;
 }
 
 export default App;
