@@ -1,27 +1,34 @@
 import "./JobCard.css";
 
-export const JobCard = () => {
+export const JobCard = (props) => {
   return (
-    <div className="card-container featured-border">
+    <div className={`card-container ${props.featured && "featured-border"}`}>
       <div className="info-container">
-        <img src="./Assets/images/photosnap.svg" />
+        <img src={props.logo} alt={`Logo from ${props.company}`} />
         <div>
           <div className="info-header">
-            <p>Photosnap</p>
-            <p className="new">NEW!</p>
-            <p className="featured">FEATURED</p>
+            <p>{props.company}</p>
+            {props.new && <p className="new">NEW!</p>}
+            {props.featured && <p className="featured">FEATURED</p>}
           </div>
-          <p className="position">Senior Frontend Developer</p>
-          <p className="more-info">1d ago • Full Time • USA only</p>
+          <p className="position">{props.position}</p>
+          <p className="more-info">{`${props.postedAt} • ${props.contract} • ${props.location}`}</p>
         </div>
       </div>
       <hr />
       <div className="keywords">
-        <p>Frontend</p>
-        <p>Senior</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Javascript</p>
+        {[...props.languages, ...props.tools].map((item) => (
+          <p
+            key={item}
+            onClick={() =>
+              props.setList((prev) =>
+                prev.includes(item) ? prev : [...prev, item]
+              )
+            }
+          >
+            {item}
+          </p>
+        ))}
       </div>
     </div>
   );

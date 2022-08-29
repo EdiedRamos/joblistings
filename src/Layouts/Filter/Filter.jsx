@@ -1,15 +1,25 @@
 import "./Filter.css";
 import { KeyWord } from "../../Components";
 
-export const Filter = () => {
+export const Filter = (props) => {
   return (
-    <div className="filter-container">
-      <div className="filter-options">
-        <div className="filter-keywords">
-          <KeyWord />
+    props.list.length > 0 && (
+      <div className="filter-container">
+        <div className="filter-options">
+          <div className="filter-keywords">
+            {props.list.map((keyword) => (
+              <KeyWord
+                key={keyword}
+                keyword={keyword}
+                setList={props.setList}
+              />
+            ))}
+          </div>
+          <p id="clear" onClick={() => props.setList(() => [])}>
+            Clear
+          </p>
         </div>
-        <p id="clear">Clear</p>
       </div>
-    </div>
+    )
   );
 };
