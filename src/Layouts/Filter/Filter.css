@@ -1,0 +1,35 @@
+.filter-container {
+  position: relative;
+  background-color: var(--light-grayish-cyan-100);
+  box-shadow: 0 5px 10px var(--desaturated-dark-cyan);
+  border-radius: 4px;
+  min-height: 60px;
+  top: -30px;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clear {
+  text-decoration: underline;
+  color: var(--desaturated-dark-cyan-200);
+}
+
+#clear:hover {
+  cursor: pointer;
+  color: var(--very-dark-grayish-cyan);
+}
+
+.filter-options {
+  display: flex;
+  width: 100%;
+  margin: 0 2.5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-keywords {
+  display: flex;
+  flex-wrap: wrap;
+}

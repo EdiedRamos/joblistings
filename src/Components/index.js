@@ -1,3 +1,4 @@
 import { JobCard } from "./JobCard";
+import { KeyWord } from "./KeyWord";
 
-export { JobCard };
+export { JobCard, KeyWord };
