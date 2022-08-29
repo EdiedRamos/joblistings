@@ -2,7 +2,7 @@
   background-color: var(--light-grayish-cyan-100);
   box-shadow: 5px 5px 10px var(--desaturated-dark-cyan);
   width: 90%;
-  min-height: 300px;
+  min-height: 250px;
   margin: 1rem auto;
   border-radius: 4px;
   padding: 0 1.5rem;
@@ -90,7 +90,7 @@
   }
   .card-container {
     display: flex;
-    height: 150px;
+    min-height: 150px;
     justify-content: space-between;
   }
   .card-container img {
