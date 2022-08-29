@@ -46,11 +46,6 @@
   color: var(--desaturated-dark-cyan-200);
 }
 
-.info-container p:nth-child(4) {
-  margin-top: 1rem;
-  color: var(--dark-grayish-cyan);
-}
-
 .card-container hr {
   margin: 1rem 0;
   height: 1px;
@@ -78,11 +73,36 @@
   cursor: pointer;
 }
 
-.position {
+.more-info {
   display: inline-block;
+  margin-top: 1rem;
+  color: var(--dark-grayish-cyan);
 }
 
 .position:hover {
   color: var(--desaturated-dark-cyan-200);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  hr {
+    display: none;
+  }
+  .card-container {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .card-container img {
+    position: static;
+    width: 75px;
+    margin-right: 1rem;
+  }
+  .info-container {
+    display: flex;
+    align-items: center;
+  }
+  .keywords {
+    align-items: center;
+  }
 }
