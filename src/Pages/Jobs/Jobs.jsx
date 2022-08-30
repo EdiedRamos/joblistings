@@ -8,7 +8,7 @@ export const Jobs = () => {
     <>
       <Header />
       <Filter list={list} setList={setList} />
-      <Listings setList={setList} />
+      <Listings list={list} setList={setList} />
     </>
   );
 };
